@@ -35,22 +35,10 @@ public class Menu {
 
     
     @Autowired
-    public Menu(Scanner scanner, List<IOptionMenu> optionMenus) {
+    public Menu(Scanner scanner, IPlatService service, List<IOptionMenu> optionMenus) {
 
-
-       // option 1 => :
         optionMenus.sort(Comparator.comparing(IOptionMenu::getPoids));
 
-        // option 2 => ->
-        //optionMenus.sort((opt1, opt2) -> Integer.compare(opt1.getPoids(), opt2.getPoids()));
-
-        // option 3 => Classe anonyme
-        /*optionMenus.sort(new Comparator<IOptionMenu>() {
-            @Override
-            public int compare(IOptionMenu o1, IOptionMenu o2) {
-                return Integer.compare(o1.getPoids(), o2.getPoids());
-            }
-        });*/
 
         int index = 1;
         for (IOptionMenu optionMenu: optionMenus) {
@@ -61,18 +49,7 @@ public class Menu {
         this.scanner = scanner;
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     public void afficher() {
 
