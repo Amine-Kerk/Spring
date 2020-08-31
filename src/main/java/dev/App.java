@@ -16,14 +16,14 @@ public class App {
 
             // Choix du Dao
             PlatDaoMemoire platDaoMemoire = new PlatDaoMemoire();
-            PlatDaoFichier platDaoFichier = new PlatDaoFichier("A_COMPLETER/2020-03-formation-spring/restaurant.txt");
+          //  PlatDaoFichier platDaoFichier = new PlatDaoFichier("A_COMPLETER/2020-03-formation-spring/restaurant.txt");
 
             // Choix du service
-            PlatServiceVersion1 platServiceVersion1 = new PlatServiceVersion1(platDaoFichier);
+            //PlatServiceVersion1 platServiceVersion1 = new PlatServiceVersion1(platDaoFichier);
             PlatServiceVersion2 platServiceVersion2 = new PlatServiceVersion2(platDaoMemoire);
 
             // Construction du menu avec le service choisi
-            Menu menu = new Menu(scanner, platServiceVersion1);
+            Menu menu = new Menu(scanner, platServiceVersion2);
             
             menu.afficher();
         }
