@@ -8,6 +8,14 @@
 	<artifactId>restaurant-console-app</artifactId>
 	<version>1.0</version>
 
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version>
+			</plugin>
+		</plugins>
+	</build>
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -34,11 +42,24 @@
 	</dependencyManagement>
 
 	<!-- Intégration Spring Context -->
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
+		</dependency>
+
+		<!-- imports des tests -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<!-- Dépendance optionnelle -->
+		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
