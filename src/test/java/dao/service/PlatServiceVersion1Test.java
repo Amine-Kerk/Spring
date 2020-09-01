@@ -46,7 +46,7 @@ class PlatServiceVersion1Test  {
 	@Test
 	public void methodeInvoquee() {
 		service1.ajouterPlat("merguez", 600);
-		verify(dao, atLeastOnce()).ajouterPlat("merguez",600);
+		verify(dao).ajouterPlat("merguez",600);
 		
 	}
 }
