@@ -21,6 +21,7 @@ public class OptionListerPlats implements IOptionMenu {
     public void executer() {
 
       //  this.service.listerPlats().forEach(plat -> System.out.println(plat.getNom() + " (" + (plat.getPrixEnCentimesEuros() / 100) + " €)"));
-    	 this.service.listerPlats().forEach(plat -> System.out.println(plat.getNom()));
+    	
+    	this.service.listerPlats().forEach(plat -> System.out.println(plat.getNom()));
     }
 }

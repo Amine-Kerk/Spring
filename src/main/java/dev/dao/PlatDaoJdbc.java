@@ -28,6 +28,7 @@ public class PlatDaoJdbc implements IPlatDao {
 	@Override
 	public List<Plat> listerPlats() {
 		// TODO Auto-generated method stub
+		
 		return this.jdbcTemplate.query("select * from plat", new PlatRowMapper());
 	}
 
