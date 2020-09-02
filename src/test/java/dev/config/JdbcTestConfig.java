@@ -1,10 +1,10 @@
 package dev.config;
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 import javax.sql.DataSource;
 
-import org.junit.jupiter.api.Test;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

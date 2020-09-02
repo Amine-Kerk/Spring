@@ -35,7 +35,7 @@ public class PlatDaoJdbc implements IPlatDao {
 	@Override
 	public void ajouterPlat(String nomPlat, Integer prixPlat) {
 		// TODO Auto-generated method stub
-		 this.jdbcTemplate.update("insert into plat(nom) values(?)", nomPlat);
+		this.jdbcTemplate.update("insert into plat (nom, prix ) values(?, ?)", nomPlat, prixPlat);
 	}
 
 }

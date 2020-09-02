@@ -13,6 +13,7 @@ public class PlatRowMapper implements RowMapper<Plat> {
         Plat plat = new Plat();
     //   plat.setId(resultSet.getInt("id"));
         plat.setNom(resultSet.getString("nom"));
+        plat.setPrixEnCentimesEuros(resultSet.getInt("prix"));
         return plat;
     }
 
