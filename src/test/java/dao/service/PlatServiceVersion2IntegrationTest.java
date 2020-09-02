@@ -13,6 +13,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import dev.dao.PlatDaoJdbc;
 import dev.dao.PlatDaoMemoire;
 import dev.entite.Plat;
 import dev.exception.PlatException;

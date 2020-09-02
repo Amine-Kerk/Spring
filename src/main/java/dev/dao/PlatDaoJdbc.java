@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import dev.entite.Plat;
+import dev.entite.PlatRowMapper;
 
 @Repository
 //selectionner le profile activé 
@@ -27,7 +28,7 @@ public class PlatDaoJdbc implements IPlatDao {
 	@Override
 	public List<Plat> listerPlats() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.jdbcTemplate.query("select * from plat", new PlatRowMapper());
 	}
 
 	@Override
