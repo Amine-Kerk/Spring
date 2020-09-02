@@ -72,11 +72,23 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-		<!-- Configuration Maven pour test integration -->
+			<!-- Configuration Maven pour test integration -->
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- la dependance jdbc Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<!-- exemple de connecteur jdbc driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
 
 	</dependencies>
 
