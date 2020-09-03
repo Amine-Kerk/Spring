@@ -20,6 +20,19 @@ class PlatDaoFichierTest {
 
 	@Autowired
 	private PlatDaoFichier platDaoFichier;
+	@Test
+	public void TestAjoutPlat() {
+		List<Plat> listAvant = platDaoFichier.listerPlats();
+		int sizeAvant = listAvant.size();
+		
+		platDaoFichier.ajouterPlat("abcdef", 10000);
+		
+		List<Plat> listApres = platDaoFichier.listerPlats();
+		int sizeApres = listApres.size();
+		
+		Assertions.assertThat(sizeAvant + 1 == sizeApres);
+		Assertions.assertThat(listApres.size()).isEqualTo(1); //Check un seul plat dans la liste (this.platDaoFichier.listerPlats()).
+	}
 
 	@Test
 	public void ajoutPlat() {
