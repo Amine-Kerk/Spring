@@ -29,12 +29,16 @@ public class Plat {
 
 @Column(name="nom")
     private String nom;
+
 @Column(name="prix")
     private Integer prixEnCentimesEuros;
+
+
     //ajoutant de la relation (plat <> ingredient)
+
 @ManyToMany 
 @JoinTable(name="plat_ingredient",joinColumns = @JoinColumn(name ="plat_id",referencedColumnName = "id"),inverseJoinColumns = @JoinColumn(name="ingredient_id"))
-    private List<Ingredient> ingredients = new ArrayList<>();
+    private List<Ingredient> listIngredients = new ArrayList<>();
 
     public Plat() {
     }
@@ -71,19 +75,19 @@ public class Plat {
 	}
 
 	public List<Ingredient> getIngredients() {
-		return ingredients;
+		return listIngredients;
 	}
 
 	public void setIngredients(List<Ingredient> ingredients) {
-		this.ingredients = ingredients;
+		this.listIngredients = ingredients;
 	}
 	
 	
 
 	@Override
 	public String toString() {
-		return "Plat [id=" + id + ", nom=" + nom + ", prixEnCentimesEuros=" + prixEnCentimesEuros + ", ingredients="
-				 + "]";
+		return  id +"|" + nom +"|"+  prixEnCentimesEuros  ;
+				 
 	}
 
 	@Override
